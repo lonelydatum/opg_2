@@ -89,6 +89,12 @@ canvas {
   background-color: white;
   -webkit-text-size-adjust: 100%;
   opacity: 1;
+  cursor: pointer;
+}
+
+#banner > a {
+  width: inherit;
+  height: inherit;
 }
 
 canvas, .text, .frame, .outline, img {
@@ -136,8 +142,88 @@ sup {
   filter: drop-shadow(5px 5px 9px black);
 }
 
-.frame1 {
+.retina {
+  -webkit-transform: translate(0px, 0px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, 0px) scale(0.5, 0.5);
+  transform: translate(0px, 0px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+#legalBtn:hover ~ #legalContent {
   opacity: 1;
+}
+
+#legalContent {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font-size: 10px;
+  z-index: 90;
+  opacity: 0;
+  font-weight: normal;
+  line-height: 14px;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+
+.hide {
+  opacity: 0;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#legalBtn {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  opacity: 1;
+  width: 36px;
+  height: 25px;
+  background-color: red;
+  opacity: 0;
+}
+
+.frame1 .hero {
+  -webkit-transform: translate(0px, -79px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -79px) scale(0.5, 0.5);
+  transform: translate(0px, -79px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
 }
 
 #banner {

@@ -5,7 +5,12 @@
 
 
 .frame1 {
-	opacity: 1;
+	// opacity: 1;
+	.hero{
+		@include pos-scale(0, -79, .5);
+		// @include pos-scale(0, -159, 0.7);
+		// @include pos-scale(-90, -79, .5);
+	}
 }
 
 
