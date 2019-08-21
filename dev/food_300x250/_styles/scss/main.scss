@@ -1,8 +1,4 @@
-
-
 @import '../../../_common/styles/common.scss';
-
-
 
 .frame1 {
 	// opacity: 1;
@@ -11,8 +7,55 @@
 		// @include pos-scale(0, -159, 0.7);
 		// @include pos-scale(-90, -79, .5);
 	}
+
+	@include pos(0, 0);
+
 }
 
+
+
+.frame2{
+	opacity: 1;
+	@include pos(0, 0);
+	@include pos(0, 190);
+
+	.masker {
+		// background-color: red;
+		overflow: hidden;
+	}
+	.t2a{
+		width: 153px;
+		height: 28px;		
+		@include pos(57, 60);		
+		img{
+			@include pos-scale(0, 0, .5);
+		}
+	}
+
+
+
+	.t2b{
+		width: 22px;
+		height: 23px;
+		@include pos-scale(223, 60, 1);
+	}
+
+	.t2c{
+		width: 183px;
+		height: 53px;
+		@include pos-scale(57, 94, 1);
+	}
+}
+
+
+.line{
+	opacity: 0;
+	transform-origin: 0 0;
+	width: 83px;
+	height: 3px;
+	background-color: #66cc00;
+	@include pos(22, 229);
+}
 
 
 #banner{
