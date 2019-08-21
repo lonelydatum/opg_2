@@ -18,7 +18,11 @@
 	opacity: 1;
 	@include pos(0, 0);
 	@include pos(0, 190);
-
+	.cobalt{
+		transform-origin: 50% 50%;
+		@include pos-scale(-150, -130, 0.5);
+		// @include pos-scale(-150, -80, 0.7);
+	}
 	.masker {
 		// background-color: red;
 		overflow: hidden;
