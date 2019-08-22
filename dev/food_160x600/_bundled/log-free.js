@@ -77,8 +77,8 @@ var endFrame = function endFrame() {
 
 	var tlLiner = new TimelineMax();
 	tlLiner.from('.power_line', .2, { opacity: 0 });
-	tlLiner.to('.power_line', .7, { width: 200, x: 280 }, '-=.2');
-	tlLiner.to('.power_line', .2, { opacity: 0 }, "-=.1");
+	tlLiner.to('.power_line', .6, { width: 180, x: "+=220" }, '-=.2');
+	tlLiner.to('.power_line', .2, { opacity: 0 }, "-=.2");
 
 	tlEnd.add(tlLetter, .3);
 	tlEnd.add(tlLiner, .3);
