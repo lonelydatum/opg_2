@@ -77,7 +77,7 @@ var endFrame = function endFrame() {
 
 	var tlLiner = new TimelineMax();
 	tlLiner.from('.power_line', .2, { opacity: 0 });
-	tlLiner.to('.power_line', .8, { width: 150, x: 280 }, '-=.2');
+	tlLiner.to('.power_line', .7, { width: 200, x: 280 }, '-=.2');
 	tlLiner.to('.power_line', .2, { opacity: 0 }, "-=.1");
 
 	tlEnd.add(tlLetter, .3);
@@ -95,7 +95,7 @@ var colorChanger = function colorChanger(id) {
 	var white_to = 'rgba(255, 255, 255, 1)';
 
 	power.fromTo("#" + id, .1, { fill: color_from }, { fill: color_to }, 0);
-	power.to("#" + id, .3, { fill: white_to }, "+=.1");
+	power.to("#" + id, .3, { fill: white_to }, "+=0");
 	return power;
 };
 
