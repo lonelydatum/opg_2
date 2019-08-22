@@ -77,11 +77,11 @@ var endFrame = function endFrame() {
 
 	var tlLiner = new TimelineMax();
 	tlLiner.from('.power_line', .2, { opacity: 0 });
-	tlLiner.to('.power_line', 1, { width: 150, x: 280 }, '-=.4');
-	tlLiner.to('.power_line', 1, { opacity: 0 }, "-=.5");
+	tlLiner.to('.power_line', .8, { width: 150, x: 280 }, '-=.2');
+	tlLiner.to('.power_line', .2, { opacity: 0 }, "-=.1");
 
 	tlEnd.add(tlLetter, .3);
-	tlEnd.add(tlLiner, .5);
+	tlEnd.add(tlLiner, .3);
 
 	return tlEnd;
 };
