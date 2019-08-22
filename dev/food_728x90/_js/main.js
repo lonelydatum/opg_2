@@ -1,7 +1,7 @@
 import {start} from  '../../_common/js/common.js'
 
 
-TweenLite.from('.hero', 2, {y:-85, ease:Power2.easeOut})
+TweenLite.from('.hero', 2, {y:0, ease:Power2.easeOut})
 
 
 

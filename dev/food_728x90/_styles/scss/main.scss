@@ -4,6 +4,9 @@
 	opacity: 1;
 	overflow: hidden;
 	.hero{
+		@include pos-scale(0, 0, .5);
+		@include pos-scale(0, -130, .5);
+		// @include pos-scale(0, 0, .5);
 	}
 
 	@include pos(0, 0);

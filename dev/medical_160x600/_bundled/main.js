@@ -32,7 +32,7 @@ var start = function start() {
 	var tl = new TimelineMax();
 	tl.set('.frame1', { opacity: 1 });
 
-	var t1_time = "+=.3";
+	var t1_time = "+=.22";
 	tl.from('.t1a', .01, { opacity: 0 }, .4);
 	tl.from('.t1b', .01, { opacity: 0 }, t1_time);
 	tl.from('.t1c', .01, { opacity: 0 }, t1_time);
@@ -88,7 +88,7 @@ tlHero.set(".hero4", { opacity: 1 }, "+=" + step);
 tlHero.set(".hero5", { opacity: 1 }, "+=" + step);
 // tlHero.set(".hero6", {opacity:1}, `+=${step}`)
 
-(0, _commonJsCommonJs.start)({ x: "-=160" }, { x: -180, y: 0, scale: .455 });
+(0, _commonJsCommonJs.start)({ x: "-=160" }, { x: -180, y: 0, scale: .468 });
 
 },{"../../_common/js/common.js":1}]},{},[2])
 

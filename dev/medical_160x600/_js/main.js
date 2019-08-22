@@ -16,4 +16,4 @@ tlHero.set(".hero4", {opacity:1}, `+=${step}`)
 tlHero.set(".hero5", {opacity:1}, `+=${step}`)
 // tlHero.set(".hero6", {opacity:1}, `+=${step}`)
 
-start({x:"-=160"}, {x:-180,y:0,scale:.455})
+start({x:"-=160"}, {x:-180,y:0,scale:.468})

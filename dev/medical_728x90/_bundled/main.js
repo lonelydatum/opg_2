@@ -32,7 +32,7 @@ var start = function start() {
 	var tl = new TimelineMax();
 	tl.set('.frame1', { opacity: 1 });
 
-	var t1_time = "+=.3";
+	var t1_time = "+=.22";
 	tl.from('.t1a', .01, { opacity: 0 }, .4);
 	tl.from('.t1b', .01, { opacity: 0 }, t1_time);
 	tl.from('.t1c', .01, { opacity: 0 }, t1_time);
