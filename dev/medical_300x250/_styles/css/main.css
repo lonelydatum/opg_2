@@ -290,4 +290,31 @@ sup {
   height: 250px;
 }
 
+.power_line {
+  width: 23px;
+  height: 7px;
+  background-color: #66cc00;
+  -webkit-transform: translate(-18px, 110px);
+  -ms-transform: translate(-18px, 110px);
+  transform: translate(-18px, 110px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+svg {
+  width: 181px;
+  height: 111px;
+  -webkit-transform: translate(58px, 62px);
+  -ms-transform: translate(58px, 62px);
+  transform: translate(58px, 62px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 /*# sourceMappingURL=main.css.map */
