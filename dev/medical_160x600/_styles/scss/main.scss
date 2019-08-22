@@ -46,3 +46,15 @@
 	height: 600px;
 }
 
+.power_line{
+	width: 23px;
+	height: 7px;
+	background-color: #66cc00;
+	@include pos(-28, 268);
+}
+
+svg{
+	width: 136px;
+	height: 111px;
+	@include pos(11, 216);	
+}
