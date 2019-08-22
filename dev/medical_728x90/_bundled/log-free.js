@@ -107,7 +107,7 @@ exports.start = start;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-TweenLite.from('.hero', 2, { y: -150, ease: Power2.easeInOut });
+TweenLite.from('.hero', 2, { y: -117, ease: Power2.easeInOut });
 
 (0, _commonJsCommonJs.start)({ y: "-=90" }, { scale: .42 });
 

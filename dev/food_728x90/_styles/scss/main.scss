@@ -4,8 +4,8 @@
 	opacity: 1;
 	overflow: hidden;
 	.hero{
-		@include pos-scale(0, 0, .5);
-		@include pos-scale(0, -130, .5);
+		
+		@include pos-scale(0, -110, 0.6);
 		// @include pos-scale(0, 0, .5);
 	}
 
@@ -13,6 +13,9 @@
 
 }
 
+.watch{
+	@include pos-scale(0, 5, .5);
+}
 
 
 .frame2{

@@ -228,6 +228,17 @@ sup {
   position: absolute;
 }
 
+.watch {
+  -webkit-transform: translate(0px, 5px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, 5px) scale(0.5, 0.5);
+  transform: translate(0px, 5px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 .frame2 {
   overflow: hidden;
   -webkit-transform: translate(0px, 90px);
