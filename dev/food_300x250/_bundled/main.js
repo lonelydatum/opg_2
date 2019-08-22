@@ -4,6 +4,9 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var banner = document.getElementById('banner');
 var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
@@ -21,25 +24,16 @@ banner.addEventListener("mouseleave", function () {
 	tl.fromTo(".line", .3, { scaleX: 1 }, { scaleX: 0 });
 });
 
-exports.size = size;
-
-},{}],2:[function(require,module,exports){
-'use strict';
-
-require('../../_common/js/common.js');
-
 var start = function start() {
+	var pan = arguments.length <= 0 || arguments[0] === undefined ? { y: "-=190" } : arguments[0];
+	var cobalt = arguments.length <= 1 || arguments[1] === undefined ? { scale: .4 } : arguments[1];
+
 	TweenLite.defaultEase = Power2.easeInOut;
 	var tl = new TimelineMax();
 	tl.set('.frame1', { opacity: 1 });
 
-	var tlHero = new TimelineMax({ repeat: 0, yoyo: true });
-	// tl.from('.hero', .7, {:-90, ease:Power1.easeInOut})
-	tlHero.from('.hero', 1, { x: 0, y: -159, scale: .7, ease: Power2.easeOut });
-
-	tl.add(tlHero);
-	var t1_time = "+=.35";
-	tl.from('.t1a', .01, { opacity: 0 });
+	var t1_time = "+=.3";
+	tl.from('.t1a', .01, { opacity: 0 }, .4);
 	tl.from('.t1b', .01, { opacity: 0 }, t1_time);
 	tl.from('.t1c', .01, { opacity: 0 }, t1_time);
 	tl.from('.t1d', .01, { opacity: 0 }, t1_time);
@@ -48,26 +42,40 @@ var start = function start() {
 	// tl.add("watch", "+=.3")
 	// tl.from('.watch', .5, {y:"+=50"}, 'cta')
 
-	tl.to([".frame1", ".frame2"], .6, { y: "-=190", ease: Power1.easeInOut }, "+=1");
-	tl.from('.cobalt', 1, { scale: .7, y: -80, ease: Power1.easeOut });
+	tl.set('.frame2', { opacity: 1 });
+	tl.to([".frame1", ".frame2"], .6, _extends({}, pan, { ease: Power1.easeInOut }), "+=1");
 
-	tl.add(endFrame(), "-=.5");
+	var tlF2 = new TimelineMax();
+
+	tlF2.from('.cobalt', 3, _extends({}, cobalt, { ease: Power1.easeOut }), 0);
+
+	tlF2.add(endFrame(), .5);
+
+	tl.add(tlF2);
 };
 
 var endFrame = function endFrame() {
 	var tlEnd = new TimelineMax();
 	var time = .01;
 
-	tlEnd.from('.t2a img', time, { opacity: 0, ease: Power2.easeInOut }, 0);
-	tlEnd.from('.t2b img', time, { opacity: 0, ease: Power2.easeInOut }, .3);
-	tlEnd.from('.t2c img', time, { opacity: 0, ease: Power2.easeInOut }, .6);
+	tlEnd.from('.t2a', time, { opacity: 0, ease: Power2.easeInOut }, 0);
+	tlEnd.from('.t2b', time, { opacity: 0, ease: Power2.easeInOut }, .3);
+	tlEnd.from('.t2c', time, { opacity: 0, ease: Power2.easeInOut }, .6);
 
 	return tlEnd;
 };
 
-start();
+exports.size = size;
+exports.start = start;
 
-module.exports = {};
+},{}],2:[function(require,module,exports){
+'use strict';
+
+var _commonJsCommonJs = require('../../_common/js/common.js');
+
+TweenLite.from('.hero', 1, { x: 0, y: -159, scale: .7, ease: Power2.easeOut });
+
+(0, _commonJsCommonJs.start)();
 
 },{"../../_common/js/common.js":1}]},{},[2])
 

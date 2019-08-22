@@ -15,40 +15,16 @@
 
 
 .frame2{
-	opacity: 1;
-	@include pos(0, 0);
+	// opacity: 1;
+	// @include pos(0, 0);
 	@include pos(0, 190);
 	.cobalt{
+		// opacity: .7;
 		transform-origin: 50% 50%;
-		@include pos-scale(-150, -130, 0.5);
-		// @include pos-scale(-150, -80, 0.7);
+		@include pos-scale(-224, -156, 0.5);
+		// @include pos-scale(-224, -156, 0.4);
 	}
-	.masker {
-		// background-color: red;
-		overflow: hidden;
-	}
-	.t2a{
-		width: 153px;
-		height: 28px;		
-		@include pos(57, 60);		
-		img{
-			@include pos-scale(0, 0, .5);
-		}
-	}
-
-
-
-	.t2b{
-		width: 22px;
-		height: 23px;
-		@include pos-scale(223, 60, 1);
-	}
-
-	.t2c{
-		width: 183px;
-		height: 53px;
-		@include pos-scale(57, 94, 1);
-	}
+	
 }
 
 
