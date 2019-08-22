@@ -43,18 +43,20 @@ const start = (pan={y:"-=190"}, cobalt={scale:.4})=>{
 	// tl.from('.watch', .5, {y:"+=50"}, 'cta')
 	
 
-
+	
 	tl.set('.frame2', {opacity:1})
 	tl.to([".frame1", ".frame2"], .6, {...pan, ease:Power1.easeInOut}, "+=1")
 
 	const tlF2 = new TimelineMax()
 
 	tlF2.from('.cobalt', 3, {...cobalt,  ease:Power1.easeOut}, 0)
-	
+	tl.add("framer2")
 
 	tlF2.add(endFrame(), .5)
 
 	tl.add(tlF2)
+
+	// tl.gotoAndPlay("framer2")
 
 }
 
@@ -66,9 +68,44 @@ const endFrame = ()=>{
 
 	tlEnd.from('.t2a', time, {opacity:0, ease:Power2.easeInOut}, 0)
 	tlEnd.from('.t2b', time, {opacity:0, ease:Power2.easeInOut}, .3)
-	tlEnd.from('.t2c', time, {opacity:0, ease:Power2.easeInOut}, .6)
+	// tlEnd.from('.t2c', time, {opacity:0, ease:Power2.easeInOut}, .6)
+
+	const list = ["power_p", "power_o", "power_w", "power_e", "power_r"]
+
+	const tlLetter = new TimelineMax()
+
+	list.map(item=>{
+		
+		const letter = colorChanger(item)
+		tlLetter.add(letter, '-=.3')
+	})
+
+
+	
+	const tlLiner = new TimelineMax()
+	tlLiner.from('.power_line', .2, {opacity:0 })
+	tlLiner.to('.power_line', 1, {width: 150, x:280 }, '-=.4')
+	tlLiner.to('.power_line', 1, {opacity:0 }, "-=.5")
+
+
+	tlEnd.add(tlLetter, .3)
+	tlEnd.add(tlLiner, .5)
+	
 
 	return tlEnd
+}
+
+const colorChanger = (id)=>{
+	const power = new TimelineMax()
+	const color_from = 'rgba(102, 204, 0, 0)'
+	const color_to = 'rgba(102, 204, 0, 1)'
+
+	const white_from = 'rgba(255, 255, 255, 0)'
+	const white_to = 'rgba(255, 255, 255, 1)'
+
+	power.fromTo(`#${id}`, .1, {fill:color_from}, {fill:color_to}, 0)
+	power.to(`#${id}`, .3, {fill:white_to}, "+=.1")
+	return power
 }
 
 

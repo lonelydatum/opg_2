@@ -27,6 +27,13 @@
 	
 }
 
+.power_line{
+	width: 23px;
+	height: 7px;
+	background-color: #66cc00;
+	@include pos(-18, 110);
+}
+
 
 .line{
 	opacity: 0;
@@ -45,3 +52,12 @@
 	height: 250px;
 }
 
+svg{
+	width: 181px;
+	height: 111px;
+	@include pos(58, 62);
+	#power_p{
+		// opacity: 0;
+		// fill:blue;
+	}
+}

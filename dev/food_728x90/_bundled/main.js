@@ -48,10 +48,13 @@ var start = function start() {
 	var tlF2 = new TimelineMax();
 
 	tlF2.from('.cobalt', 3, _extends({}, cobalt, { ease: Power1.easeOut }), 0);
+	tl.add("framer2");
 
 	tlF2.add(endFrame(), .5);
 
 	tl.add(tlF2);
+
+	// tl.gotoAndPlay("framer2")
 };
 
 var endFrame = function endFrame() {
@@ -60,9 +63,40 @@ var endFrame = function endFrame() {
 
 	tlEnd.from('.t2a', time, { opacity: 0, ease: Power2.easeInOut }, 0);
 	tlEnd.from('.t2b', time, { opacity: 0, ease: Power2.easeInOut }, .3);
-	tlEnd.from('.t2c', time, { opacity: 0, ease: Power2.easeInOut }, .6);
+	// tlEnd.from('.t2c', time, {opacity:0, ease:Power2.easeInOut}, .6)
+
+	var list = ["power_p", "power_o", "power_w", "power_e", "power_r"];
+
+	var tlLetter = new TimelineMax();
+
+	list.map(function (item) {
+
+		var letter = colorChanger(item);
+		tlLetter.add(letter, '-=.3');
+	});
+
+	var tlLiner = new TimelineMax();
+	tlLiner.from('.power_line', .2, { opacity: 0 });
+	tlLiner.to('.power_line', 1, { width: 150, x: 280 }, '-=.4');
+	tlLiner.to('.power_line', 1, { opacity: 0 }, "-=.5");
+
+	tlEnd.add(tlLetter, .3);
+	tlEnd.add(tlLiner, .5);
 
 	return tlEnd;
+};
+
+var colorChanger = function colorChanger(id) {
+	var power = new TimelineMax();
+	var color_from = 'rgba(102, 204, 0, 0)';
+	var color_to = 'rgba(102, 204, 0, 1)';
+
+	var white_from = 'rgba(255, 255, 255, 0)';
+	var white_to = 'rgba(255, 255, 255, 1)';
+
+	power.fromTo("#" + id, .1, { fill: color_from }, { fill: color_to }, 0);
+	power.to("#" + id, .3, { fill: white_to }, "+=.1");
+	return power;
 };
 
 exports.size = size;
