@@ -45,7 +45,7 @@ const start = (pan={y:"-=190"}, cobalt={scale:.4})=>{
 
 	
 	tl.set('.frame2', {opacity:1})
-	tl.to([".frame1", ".frame2"], .6, {...pan, ease:Power1.easeInOut}, "+=1")
+	tl.to([".frame1", ".frame2"], .6, {...pan, ease:Power1.easeInOut}, "+=1.8")
 
 	const tlF2 = new TimelineMax()
 

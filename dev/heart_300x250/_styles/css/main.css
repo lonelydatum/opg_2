@@ -218,6 +218,7 @@ sup {
 .frame1 {
   opacity: 1;
   background-color: #d59788;
+  background-color: red;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
@@ -232,9 +233,9 @@ sup {
   -webkit-transform-origin: 220px 100px;
   -ms-transform-origin: 220px 100px;
   transform-origin: 220px 100px;
-  -webkit-transform: translate(20px, 0px) scale(1, 1);
-  -ms-transform: translate(20px, 0px) scale(1, 1);
-  transform: translate(20px, 0px) scale(1, 1);
+  -webkit-transform: translate(20px, 8px) scale(1, 1);
+  -ms-transform: translate(20px, 8px) scale(1, 1);
+  transform: translate(20px, 8px) scale(1, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

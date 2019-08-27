@@ -3,11 +3,12 @@
 .frame1 {
 	opacity: 1;
 	background-color: #d59788;
+	background-color: red;
 	#hero{
 		
 		transform-origin: 220px 100px;
 
-		@include pos-scale(20, 0, 1);
+		@include pos-scale(20, 8, 1);
 		img{
 			opacity:0;
 		}

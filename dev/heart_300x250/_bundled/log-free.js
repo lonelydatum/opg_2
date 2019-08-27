@@ -43,7 +43,7 @@ var start = function start() {
 	// tl.from('.watch', .5, {y:"+=50"}, 'cta')
 
 	tl.set('.frame2', { opacity: 1 });
-	tl.to([".frame1", ".frame2"], .6, _extends({}, pan, { ease: Power1.easeInOut }), "+=1");
+	tl.to([".frame1", ".frame2"], .6, _extends({}, pan, { ease: Power1.easeInOut }), "+=1.8");
 
 	var tlF2 = new TimelineMax();
 
@@ -125,7 +125,7 @@ function heart() {
 
 heart();
 
-(0, _commonJsCommonJs.start)();
+// start()
 
 },{"../../_common/js/common.js":1}]},{},[2])
 
