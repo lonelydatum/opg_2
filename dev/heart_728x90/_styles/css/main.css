@@ -216,7 +216,6 @@ sup {
 }
 
 .frame1 {
-  opacity: 1;
   overflow: hidden;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
