@@ -103,24 +103,24 @@ exports.size = size;
 exports.start = start;
 
 },{}],2:[function(require,module,exports){
-'use strict';
+"use strict";
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 function heart() {
 	var tl_hero = new TimelineMax({ repeat: 4 });
-	tl_hero.set('#hero_' + 0, { opacity: 1 });
+	tl_hero.set("#hero_" + 0, { opacity: 1 });
 
 	var list = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 140, 160, 180, 200, 220, 240];
 
 	list.map(function (item) {
-		tl_hero.set('#hero_' + item, { opacity: 1 }, "+=.12");
+		tl_hero.set("#hero_" + item, { opacity: 1 }, "+=.12");
 	});
 
-	tl_hero.set('#hero img', { opacity: 0 });
-	tl_hero.set('#hero_' + 0, { opacity: 1 });
+	tl_hero.set("#hero img", { opacity: 0 });
+	tl_hero.set("#hero_" + 0, { opacity: 1 });
 
-	TweenMax.from('#hero', .4, { scale: '+=.1', ease: Back.easeOut, yoyo: true, repeat: 10, repeatDelay: .15 });
+	// TweenMax.from('#hero', .4, {scale:'+=.1', ease:Back.easeOut, yoyo:true, repeat:10, repeatDelay:.15})
 }
 
 heart();

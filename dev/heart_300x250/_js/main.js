@@ -18,7 +18,7 @@ function heart(){
 	tl_hero.set(`#hero img`, {opacity:0})
 	tl_hero.set(`#hero_${0}`, {opacity:1})
 
-	TweenMax.from('#hero', .4, {scale:'+=.1', ease:Back.easeOut, yoyo:true, repeat:10, repeatDelay:.15})
+	// TweenMax.from('#hero', .4, {scale:'+=.1', ease:Back.easeOut, yoyo:true, repeat:10, repeatDelay:.15})
 
 
 }
