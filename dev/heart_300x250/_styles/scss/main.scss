@@ -1,11 +1,16 @@
 @import '../../../_common/styles/common.scss';
 
 .frame1 {
-	// opacity: 1;
-	.hero{
-		transform-origin: 220px 140px;
+	opacity: 1;
+	background-color: #d59788;
+	#hero{
+		
+		transform-origin: 220px 100px;
 
-		@include pos-scale(-110, -70, .5);
+		@include pos-scale(20, 0, 1);
+		img{
+			opacity:0;
+		}
 		// @include pos-scale(0, -159, 0.7);
 		// @include pos-scale(-90, -79, .5);
 	}
