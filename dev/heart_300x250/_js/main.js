@@ -25,4 +25,4 @@ function heart(){
 
 heart()
 
-// start()
+start()

@@ -125,7 +125,7 @@ function heart() {
 
 heart();
 
-// start()
+(0, _commonJsCommonJs.start)();
 
 },{"../../_common/js/common.js":1}]},{},[2])
 
