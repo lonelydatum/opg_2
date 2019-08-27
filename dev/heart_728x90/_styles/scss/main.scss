@@ -1,0 +1,66 @@
+@import '../../../_common/styles/common.scss';
+
+.frame1 {
+	opacity: 1;
+	overflow: hidden;
+	.hero{
+		transform-origin: 260px 90px;
+		@include pos-scale(-130, -45, .5);
+
+		// @include pos-scale(0, -110, 0.6);
+		// @include pos-scale(0, 0, .5);
+	}
+
+	@include pos(0, 0);
+
+}
+
+.watch{
+	@include pos-scale(0, 5, .5);
+}
+
+
+.frame2{
+	// opacity: 1;
+	overflow: hidden;
+	// @include pos(0, 0);
+	@include pos(0, 90);
+	.cobalt{
+		// opacity: .7;
+		transform-origin: 50% 50%;
+		@include pos-scale(-397, -105, 0.5);
+		// @include pos-scale(-407, -105, 0.4);
+	}
+	
+}
+
+
+.line{
+	opacity: 0;
+	transform-origin: 0 0;
+	width: 83px;
+	height: 3px;
+	background-color: #66cc00;
+	@include pos(454, 56);
+}
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 728px;
+	height: 90px;
+}
+
+.power_line{
+	width: 23px;
+	height: 7px;
+	background-color: #66cc00;
+	@include pos(-10, 56);	
+}
+
+svg{
+	width: 170px;
+	height: 111px;
+	@include pos(20, 6);	
+}
